@@ -6,42 +6,116 @@
   <title>Solis Painting</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      line-height: 1.6;
-      background-color: #f4f4f4;
       color: #333;
+      line-height: 1.6;
+      background-color: #f9f9f9;
     }
+
+    /* Header */
     header {
-      background-color: #4CAF50;
+      background: url('https://images.unsplash.com/photo-1611605698036-3b5c70b1c0a8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTI4N3wwfDF8c2VhcmNofDF8fHBhaW50aW5nJTIwYmFja2dyb3VuZHxlbnwwfHx8fDE2OTUyMDI3Mjk&ixlib=rb-4.0.3&q=80&w=1920') no-repeat center center/cover;
       color: white;
-      padding: 40px 20px;
       text-align: center;
+      padding: 120px 20px;
+      position: relative;
     }
-    header h1 {
+
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.5);
+      z-index: 0;
+    }
+
+    header h1, header p {
+      position: relative;
+      z-index: 1;
       margin: 0;
-      font-size: 2.5em;
     }
+
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
     header p {
-      font-size: 1.2em;
-      margin-top: 10px;
+      font-size: 1.3em;
     }
+
+    /* Navigation */
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #4CAF50;
+    }
+
+    nav a {
+      color: white;
+      padding: 15px 25px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      background-color: #45a049;
+    }
+
+    /* Sections */
     section {
-      max-width: 900px;
-      margin: 20px auto;
+      max-width: 1000px;
+      margin: 50px auto;
       padding: 20px;
       background-color: white;
       border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
     }
+
+    section img {
+      width: 300px;
+      max-width: 100%;
+      margin-right: 20px;
+      border-radius: 10px;
+    }
+
+    section div {
+      flex: 1;
+    }
+
     section h2 {
       color: #4CAF50;
-      border-bottom: 2px solid #4CAF50;
-      padding-bottom: 5px;
+      margin-top: 0;
     }
-    section p {
-      margin-top: 10px;
+
+    /* Contact */
+    .contact-info {
+      text-align: center;
+      padding: 50px 20px;
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    .contact-info a {
+      color: white;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      section img {
+        margin: 0 0 20px 0;
+      }
     }
   </style>
 </head>
@@ -49,40 +123,64 @@
 
   <header>
     <h1>Solis Painting</h1>
-    <p>Bringing top-notch quality and professionalism to every job. We make your spaces look their best!</p>
+    <p>High-quality painting, flooring, power washing, and more — transforming your space!</p>
   </header>
 
-  <section>
-    <h2>Power Washing</h2>
-    <p>We provide professional power washing services to remove dirt, grime, and stains from your home or business exterior, leaving it sparkling clean.</p>
+  <nav>
+    <a href="#power-washing">Power Washing</a>
+    <a href="#flooring">Flooring</a>
+    <a href="#sheetrocking">Sheetrock</a>
+    <a href="#painting">Painting</a>
+    <a href="#wallpaper">Wallpaper</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="power-washing">
+    <img src="https://images.unsplash.com/photo-1610965251791-4d0d16a7f87c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600" alt="Power Washing">
+    <div>
+      <h2>Power Washing</h2>
+      <p>We remove dirt, grime, and stains from your home or business exterior, leaving surfaces sparkling clean and refreshed.</p>
+    </div>
   </section>
 
-  <section>
-    <h2>Flooring</h2>
-    <p>From installation to repair, our flooring services cover hardwood, laminate, and other flooring types, ensuring durability and elegance in every room.</p>
+  <section id="flooring">
+    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600" alt="Flooring">
+    <div>
+      <h2>Flooring</h2>
+      <p>Installation and repair of hardwood, laminate, and more. Durable, elegant flooring that enhances any room.</p>
+    </div>
   </section>
 
-  <section>
-    <h2>Sheetrocking</h2>
-    <p>We install and repair sheetrock with precision, providing smooth walls and ceilings that are ready for painting or finishing.</p>
+  <section id="sheetrocking">
+    <img src="https://images.unsplash.com/photo-1600585154217-0e3298b2f48f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600" alt="Sheetrocking">
+    <div>
+      <h2>Sheetrocking</h2>
+      <p>Expert sheetrock installation and repair for smooth, ready-to-paint walls and ceilings.</p>
+    </div>
   </section>
 
-  <section>
-    <h2>Painting</h2>
-    <p>Our painting services include interior and exterior painting, color consultation, and a commitment to high-quality finishes that last.</p>
+  <section id="painting">
+    <img src="https://images.unsplash.com/photo-1611605698036-3b5c70b1c0a8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600" alt="Painting">
+    <div>
+      <h2>Painting</h2>
+      <p>Interior and exterior painting with attention to detail and a commitment to long-lasting, beautiful finishes.</p>
+    </div>
   </section>
 
-  <section>
-    <h2>Wallpaper</h2>
-    <p>We install wallpaper with care and attention to detail, transforming your walls with patterns, textures, and styles to match your vision.</p>
+  <section id="wallpaper">
+    <img src="https://images.unsplash.com/photo-1600585154207-0e3298b2f48f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600" alt="Wallpaper">
+    <div>
+      <h2>Wallpaper</h2>
+      <p>Professional wallpaper installation that brings patterns, textures, and style to any space with precision and care.</p>
+    </div>
   </section>
 
-<section class="contact-info">
+  <section class="contact-info" id="contact">
     <h2>Contact Us</h2>
     <p>Email: <a href="mailto:cerey@maestorenovationllc.com">cerey@maestorenovationllc.com</a></p>
     <p>Phone 1: <a href="tel:+19192087159">(919) 208-7159</a></p>
     <p>Phone 2: <a href="tel:+19193695268">(919) 369-5268</a></p>
-</section>
+  </section>
 
 </body>
 </html>
