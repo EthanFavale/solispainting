@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solis Painting</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+    section {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    section h2 {
+      color: #4CAF50;
+      border-bottom: 2px solid #4CAF50;
+      padding-bottom: 5px;
+    }
+    section p {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Solis Painting</h1>
+    <p>Bringing top-notch quality and professionalism to every job. We make your spaces look their best!</p>
+  </header>
+
+  <section>
+    <h2>Power Washing</h2>
+    <p>We provide professional power washing services to remove dirt, grime, and stains from your home or business exterior, leaving it sparkling clean.</p>
+  </section>
+
+  <section>
+    <h2>Flooring</h2>
+    <p>From installation to repair, our flooring services cover hardwood, laminate, and other flooring types, ensuring durability and elegance in every room.</p>
+  </section>
+
+  <section>
+    <h2>Sheetrocking</h2>
+    <p>We install and repair sheetrock with precision, providing smooth walls and ceilings that are ready for painting or finishing.</p>
+  </section>
+
+  <section>
+    <h2>Painting</h2>
+    <p>Our painting services include interior and exterior painting, color consultation, and a commitment to high-quality finishes that last.</p>
+  </section>
+
+  <section>
+    <h2>Wallpaper</h2>
+    <p>We install wallpaper with care and attention to detail, transforming your walls with patterns, textures, and styles to match your vision.</p>
+  </section>
+
+</body>
+</html>
